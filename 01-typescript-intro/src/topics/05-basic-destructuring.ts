@@ -24,8 +24,13 @@ const { song, songDuration, details } = audioPlayer;
 
 const { author} = details;
 
-console.log('Song: ', song);
-console.log('Duration: ', songDuration);
-console.log('Author: ', author);
+// console.log('Song: ', song);
+// console.log('Duration: ', songDuration);
+// console.log('Author: ', author);
 //console.table(audioPlayer);
 
+//Desestructuración de arrleglos
+const [,,trunks = 'Not founs']: string[] = ['Goku', 'Vegeta', 'Trunks'];
+
+
+console.error('Personaje 3: ', trunks);
