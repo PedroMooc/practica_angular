@@ -1,3 +1,13 @@
 <h1 style="text-align: center;">
   Bienvenido a {{ title }}
 </h1>
+
+<div>
+  <p>Nombre del empleado: {{nombre}}</p>
+  <p>Edad: {{edad}}</p>
+  <p>El empleado dentro de 5 años tendra: {{edad+5}}</p>
+  <p>Los últimos 3 sueldos son: {{sueldos[0]}}, {{sueldos[1]}} y {{sueldos[2]}}</p>
+  <p>En los ultimos 3 meses ha ganado: {{ultimos3Sueldos()}}</p>
+  <p>{{esActivo()}} </p>
+  <p>Puede visitar el sitio ingresando <a href="{{sitio}}">aquí</a></p>
+</div>
