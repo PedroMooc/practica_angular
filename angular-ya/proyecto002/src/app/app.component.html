@@ -1,0 +1,47 @@
+<div>
+  <h1>Administración de artículos</h1>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Descripción</th>
+        <th>Precio</th>
+        <th colspan="2">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngIf="!articulos || articulos.length === 0">
+        <td colspan="5">No hay artículos.</td>
+      </tr>
+
+      <tr *ngFor="let articulo of articulos">
+        <td>{{ articulo.codigo }}</td>
+        <td>{{ articulo.descripcion }}</td>
+        <td>{{ articulo.precio}}</td>
+        <td>
+          <button type="button" (click)="borrar(articulo.codigo)">Borrar</button>
+        </td>
+        <td>
+          <button type="button" (click)="seleccionar(articulo.codigo)">Seleccionar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    <p>
+      <label for="codigo">Código:</label>
+      <input type="text" id="codigo" [(ngModel)]="nuevoArticulo.codigo">
+    </p>
+    <p>
+      <label for="descripcion">Descripción:</label>
+      <input type="text" id="descripcion" [(ngModel)]="nuevoArticulo.descripcion">
+    </p>
+    <p>
+      <label for="precio">Precio:</label>
+      <input type="number" id="precio" [(ngModel)]="nuevoArticulo.precio">
+    </p>
+    <button type="button" (click)="agregar()">Agregar</button>
+    <button type="button" (click)="modificar()">Modificar</button>
+  </div>
+</div>
