@@ -1,17 +1,22 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NgIf, NgFor } from "@angular/common";
+import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgIf, NgFor],
+  imports: [RouterOutlet, NgIf, NgFor,
+    FormsModule
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'proyecto001';
-  nombre = 'Pedro Morales';
+  nombre = 'Pedro';
+  apellido= 'Morales';
   edad = 30;
   email = 'pedro@gmail.com';
   sueldos = [1700, 1600, 1900];

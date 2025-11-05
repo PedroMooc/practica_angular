@@ -32,3 +32,9 @@
   <button (click)="incrementar()">Incrementar</button>
   <button (click)="decrementar()">Decrementar</button>
 </div>
+<div>
+  <h2>Ejemplo directiva ngModel</h2>
+  <p>Ingrese el nombre <input type="text" [(ngModel)]="nombre"></p>
+  <p>Ingrese el apellido <input type="text" [(ngModel)]="apellido"></p>
+  <p>Nombre completo: {{nombre}} {{apellido}}</p>
+</div>
