@@ -17,6 +17,7 @@ export class AppComponent {
   sueldos = [1700, 1600, 1900];
   activo = true;
   sitio = 'www.google.com';
+  contador = 1;
 
   esActivo() {
     if (this.activo) {
@@ -32,5 +33,12 @@ export class AppComponent {
       suma += this.sueldos[x];
     }
     return suma;
+  }
+
+  incrementar(){
+    this.contador++;
+  }
+  decrementar(){
+    this.contador--;
   }
 }
