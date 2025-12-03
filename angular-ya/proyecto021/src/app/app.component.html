@@ -1,0 +1,16 @@
+<div class="contenedor">
+  <mat-form-field>
+    <input matInput [(ngModel)]="valor1" type="number" placeholder="Ingrese el primer valor">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="valor2" type="number" placeholder="Ingrese el primer valor">
+  </mat-form-field>
+  <mat-radio-group [(ngModel)]="operacionSeleccionada">
+    <mat-radio-button value="sumar">Sumar</mat-radio-button>
+    <mat-radio-button value="restar">Restar</mat-radio-button>
+    <mat-radio-button value="multiplicar">Multiplicar</mat-radio-button>
+    <mat-radio-button value="dividir">Dividir</mat-radio-button>
+  </mat-radio-group>
+  <button mat-raised-button (click)="operar()">Calcular</button>
+  <p>Resultado: {{resultado}}</p>
+</div>
