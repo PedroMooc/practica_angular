@@ -1,0 +1,27 @@
+<button mat-button [matMenuTriggerFor]="periodicos">Periódicos</button>
+<mat-menu #periodicos="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="argentina">Periódicos de Argentina</button>
+  <button mat-menu-item [matMenuTriggerFor]="chile">Periódicos de Chile</button>
+</mat-menu>
+
+<mat-menu #argentina="matMenu">
+  <a mat-menu-item href="">La Nación</a>
+  <a mat-menu-item href="">Clarin</a>
+  <a mat-menu-item href="">Ambito</a>
+  <a mat-menu-item href="">Infobae</a>
+  <a mat-menu-item href="">Cronista</a>
+</mat-menu>
+
+<mat-menu #chile="matMenu">
+  <a mat-menu-item href="">El Mercurio</a>
+  <a mat-menu-item href="">La Tercera</a>
+  <a mat-menu-item href="">La Cuarta</a>
+</mat-menu>
+
+<button mat-button [matMenuTriggerFor]="buscadores">Buscadores de Internet</button>
+
+<mat-menu #buscadores="matMenu">
+  <a mat-menu-item href="">Google</a>
+  <a mat-menu-item href="">Bing</a>
+  <a mat-menu-item href="">DuckDuckGo</a>
+</mat-menu>
