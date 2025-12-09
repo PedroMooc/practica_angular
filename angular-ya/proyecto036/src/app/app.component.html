@@ -1,0 +1,8 @@
+<div style="width: 90%; margin: 0 auto;" *ngIf="post!=null">
+  <mat-expansion-panel *ngFor="let p of post">
+    <mat-expansion-panel-header>
+      <mat-panel-title>{{p.title}}</mat-panel-title>
+    </mat-expansion-panel-header>
+    {{p.body}}
+  </mat-expansion-panel>
+</div>
