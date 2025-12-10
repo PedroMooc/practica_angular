@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'boot-alerta',
@@ -7,6 +7,14 @@ import { Component } from '@angular/core';
   templateUrl: './alerta.component.html',
   styleUrl: './alerta.component.css'
 })
-export class AlertaComponent {
+export class AlertaComponent implements OnInit {
+
+  @Input() color!: string;
+  @Input() mensaje!: string;
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
 
 }
