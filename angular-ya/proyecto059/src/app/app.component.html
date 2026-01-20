@@ -4,7 +4,7 @@
     <span *ngIf="this.formularioContacto.get('nombre')?.errors?.['required']">
       (El nombre no puede quedar vacío)
     </span>
-    <span *ngIf="this.formularioContacto.get('nombre')?.errors?.['maxlength']">
+    <span *ngIf="this.formularioContacto.get('nombre')?.errors?.['minlength']">
       (Debe tener mínimo 10 caracteres)
     </span>
   </p>
@@ -13,12 +13,12 @@
     <span *ngIf="this.formularioContacto.get('mail')?.errors?.['required']">
       (El mail no puede quedar vacío)
     </span>
-    <span *ngIf="this.formularioContacto.get('mail')?.errors?.['mail']">
+    <span *ngIf="this.formularioContacto.get('mail')?.errors?.['email']">
       (El mail no es válido)
     </span>
   </p>
   <p>Mensaje:
-    <textarea rows="10" cols="70" formsControlName="mensaje"></textarea>
+    <textarea rows="10" cols="70" formControlName="mensaje"></textarea>
   </p>
   <div *ngIf="this.formularioContacto.get('mensaje')?.errors?.['required']">
     (El mensaje no puede quedar vacío)
